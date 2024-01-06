@@ -1,7 +1,6 @@
 <template>
-  <div class="bg-blue-700">
-    App.vue  
-
+  <div>
+    <router-view />
   </div>
 </template>
 
