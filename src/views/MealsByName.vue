@@ -19,9 +19,7 @@
                     veritatis architecto!
                 </p>
                 <div class="flex items-center justify-between">
-                    <a :href="meal.strYoutube" target="_blank" class="px-3 py-2 text-white rounded border-2 border-red-600 bg-red-500 hover:bg-red-600 hover:text-white transition-colors">
-                        YouTube
-                    </a>
+                    <YouTubeButton :href="meal.strYoutube">YouTube</YouTubeButton>
                 </div>
             </div>
         </div>
@@ -33,6 +31,7 @@ import { computed, onMounted, ref } from 'vue';
 import axiosClient from '../axiosClient';
 import { useRoute } from 'vue-router';
 import store from '../store';
+import YouTubeButton from '../components/YouTubeButton.vue';
 
 const route = useRoute()
 const keyword = ref('')
