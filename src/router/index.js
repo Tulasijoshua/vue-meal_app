@@ -27,6 +27,11 @@ const routes = [
                 name: 'byIngredient',
                 component: import('../views/MealsByIngredient.vue')
             },
+            {
+                path: '/meal/:id',
+                name: 'mealDetails',
+                component: import('../views/MealDetails.vue')
+            },
         ]
     },
     {
