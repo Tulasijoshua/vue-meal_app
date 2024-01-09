@@ -4,10 +4,13 @@
     </div>
 </template>
 
-<script>
-    export default {
-        
-    }
+<script setup>
+import { onMounted } from 'vue';
+import axiosClient from '../axiosClient';
+
+    onMounted(() => {
+        axiosClient
+    })
 </script>
 
 <style scoped>
