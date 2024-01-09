@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue'
 import DefaultLayout from '../components/DefaultLayout.vue'
+import Ingredients from '../views/Ingredients.vue'
 
 const routes = [
     {
@@ -23,8 +24,13 @@ const routes = [
                 component: import('../views/MealsByLetter.vue')
             },
             {
+                path: '/ingredients',
+                name: 'ingredients',
+                component: Ingredients
+            },
+            {
                 path: '/by-ingredient/:ingredient?',
-                name: 'byIngredient',
+                name: 'byIngredients',
                 component: import('../views/MealsByIngredient.vue')
             },
             {
