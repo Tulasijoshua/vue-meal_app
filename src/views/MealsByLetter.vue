@@ -1,13 +1,15 @@
 <template>
-    <div>
-        By letter
+    <div class="flex justify-center gap-2 mt-2:">
+        <router-link :to="{name: 'byLetter', params: {letter}}" v-for="letter of letters" :key="letter">
+            {{ letter }}
+        </router-link>
     </div>
 </template>
 
-<script>
-    export default {
-        
-    }
+<script setup>
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
+
+    
 </script>
 
 <style scoped>
