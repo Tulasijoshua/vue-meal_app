@@ -29,8 +29,8 @@ const routes = [
                 component: Ingredients
             },
             {
-                path: '/by-ingredient/:ingredient?',
-                name: 'byIngredients',
+                path: '/by-ingredient/:ingredient',
+                name: 'byIngredient',
                 component: import('../views/MealsByIngredient.vue')
             },
             {
