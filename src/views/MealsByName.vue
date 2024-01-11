@@ -13,11 +13,8 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import axiosClient from '../axiosClient';
 import { useRoute } from 'vue-router';
 import store from '../store';
-import YouTubeButton from '../components/YouTubeButton.vue';
-import MealItem from '../components/MealItem.vue';
 import Meals from '../components/Meals.vue'
 
 const route = useRoute()
@@ -25,7 +22,11 @@ const keyword = ref('')
 const meals = computed(() => store.state.searchedMeals);
 
     function searchMeals() {
-        store.dispatch('searchMeals', keyword.value)
+        if (keyword.value) {
+            store.dispatch('searchMeals', keyword.value)
+        } else {
+            store.commit('setSearchedMeals', [])
+        }
     }
                     
     onMounted(() => {
