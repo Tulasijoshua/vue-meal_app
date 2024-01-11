@@ -1,7 +1,9 @@
 <template>
-    <div class="p-8">
-        <h1 class="text-4xl font-bold mb-4">Ingredients</h1>
-        <input type="text" 
+    <div >
+        <div class="p-8 pb-0">
+            <h1 class="text-4xl font-bold mb-4 text-orange-500">Ingredients</h1>
+        </div>
+        <input type="text"
             v-model="keyword"
             class="w-full rounded border-2 bg-white border-gray-200 mb-3" 
             placeholder="Search for Ingredients" 
