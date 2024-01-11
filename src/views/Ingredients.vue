@@ -27,10 +27,7 @@ import axiosClient from '../axiosClient';
 
     const computedIngredients = computed(() => {
         if(!computedIngredients) return ingredients
-        return ingredients.value.filter(i => 
-        (i.strDescription || '').toLowerCase().includes(keyword.value.toLowerCase()) ||
-        i.strIngredient.toLowerCase().includes(keyword.value.toLowerCase())
-        )
+        return ingredients.value.filter(i => i.strIngredient.toLowerCase().includes(keyword.value.toLowerCase()))
     })
 
     onMounted( () => {
