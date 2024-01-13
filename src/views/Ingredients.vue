@@ -9,14 +9,15 @@
             placeholder="Search for Ingredients" 
             @change="searchMeals"
         />
-        <router-link 
-        v-for="ingredient of computedIngredients" :key="ingredient.idIngredient" 
-        :to="{name: 'byIngredient', params: {ingredient: ingredient.strIngredient}}" 
-            class="block bg-white rounded p-3 mb-3 shadow"
-        >
-            <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
-            <p>{{ ingredient.strDescription }}</p>
-        </router-link>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <a href="#"
+                @click.prevent="openIngredient(ingredient)"
+                v-for="ingredient of computedIngredients" :key="ingredient.idIngredient" 
+                class="block bg-white rounded p-3 mb-3 shadow"
+            >
+                <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
+            </a>
+        </div>
     </div>
 </template>
 
