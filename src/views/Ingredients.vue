@@ -34,7 +34,7 @@ import store from "../store";
     const ingredients = ref([])
 
     const computedIngredients = computed(() => {
-        if(!computedIngredients) return ingredients
+        if(!computedIngredients) return ingredients;
         return ingredients.value.filter((i) => i.strIngredient.toLowerCase().includes(keyword.value.toLowerCase()))
     });
 
